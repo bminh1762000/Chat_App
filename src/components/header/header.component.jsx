@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
 
-const NavbarHeader = () => {
+const NavbarHeader = ({setFormOpen}) => {
   return (
     <Navbar
       collapseOnSelect
@@ -11,14 +11,14 @@ const NavbarHeader = () => {
       }}
       variant="dark"
     >
-      <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar.Brand href="#home">Event-Dashboard</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="#pricing" className="text-white mr-3">
             Events
           </Nav.Link>
-          <Button variant="success" style={{ border: "2px solid white" }}>
+          <Button variant="success" style={{ border: "2px solid white" }} onClick={()=>setFormOpen(true)}>
             Create event
           </Button>
         </Nav>
